@@ -2,161 +2,106 @@
 <html>
 <head>
 <title>Chocolaterie</title>
+
 <style>
+
 body{
-margin:0;
-font-family:Arial, sans-serif;
+    margin:0;
+    font-family:Arial;
 }
 
-.container{
-display:grid;
-grid-template-rows:auto auto 1fr auto;
-grid-template-columns:200px auto;
-grid-template-areas:
-"header header"
-"sales sales"
-"sidebar products"
-"footer footer";
-gap:10px;
-padding:10px;
+/* MAIN GRID */
+.wrapper{
+    display:grid;
+    grid-template-rows:auto auto 1fr auto;
+    height:100vh;
 }
 
+/* Header */
 .header{
-grid-area:header;
-background-color:rgb(174,202,71);
-color:rgb(26,10,10);
-padding:20px;
-text-align:center;
-font-size:large;
-font-style:italic;
+    background:#a8c545;
+    text-align:center;
+    padding:20px;
+    font-weight:bold;
 }
 
-.sales{
-grid-area:sales;
-background-color:rgb(163,143,89);
-text-align:center;
-padding:5px;
-font-size:medium;
-font-style:italic;
+/* Offer bar */
+.offer{
+    background:#b39b63;
+    text-align:center;
+    padding:10px;
 }
 
-.sidebar{
-grid-area:sidebar;
-background-color:rgb(212,149,54);
-padding:15px;
-text-align:center;
+/* Content grid */
+.main{
+    display:grid;
+    grid-template-columns:200px 1fr;
 }
 
-.products{
-grid-area:products;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-padding:10px;
-background-color:rgb(170,71,71);
+/* Sidebar */
+.menu{
+    background:#c98a2e;
+    padding:20px;
 }
 
-.card{
-border:1px solid #ccc;
-padding:10px;
-text-align:center;
-background:#fff;
+.menu a{
+    display:block;
+    margin:15px 0;
+    color:blue;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.card img{
-width:100px;
-height:150px;
-object-fit:cover;
+/* iframe area */
+.content{
+    padding:10px;
 }
 
-.card h3{
-margin:10px 0 5px;
-font-size:16px;
+iframe{
+    width:100%;
+    height:100%;
+    border:4px solid #b44;
 }
 
-.card p{
-font-size:14px;
-margin:5px 0;
-}
-
-.card button{
-margin-top:8px;
-padding:6px 12px;
-border:none;
-background-color:#99638b;
-color:rgb(19,8,8);
-cursor:pointer;
-}
-
-.card button:hover{
-background-color:#030a13;
-color:white;
-}
-
+/* Footer */
 .footer{
-grid-area:footer;
-background-color:darkgray;
-text-align:center;
-padding:5px;
-font-size:larger;
+    background:#ccc;
+    text-align:center;
+    padding:10px;
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
 <div class="header">
-<h2>Chocolaterie<br>
+Chocolaterie <br>
 P.Bhavya Sree cse25233
-</h2>
 </div>
 
-<div class="sales">
-<p>Sales Flat 15% OFF - By Shopping Hub</p>
+<div class="offer">
+Sales Flat 15% OFF - By Shopping Hub
 </div>
 
-<div class="sidebar">
-<a href="Amul.html">Amul</a><br>
-<a href="Cadbury.html">Cadbury</a><br>
-<a href="Hershey.html">Hershey’s</a><br>
+<div class="main">
+
+<div class="menu">
+<a href="amul.html" target="shopframe">Amul</a>
+<a href="cadbury.html" target="shopframe">Cadbury</a>
+<a href="hersheys.html" target="shopframe">Hershey's</a>
 </div>
 
-<div class="products">
-
-<div class="card">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNctHaqr4k72yYXU2oHZxDZdNm3M94NrNTSg&s">
-<h3>Hershey’s Kisses Chocolate</h3>
-<p>Price: Rs 1200/-</p>
-<button>Add To Cart</button>
-</div>
-
-<div class="card">
-<img src="https://m.media-amazon.com/images/I/715iFebzdBL._SL1500_.jpg">
-<h3>Hershey’s Nuggets</h3>
-<p>Price: Rs 495/-</p>
-<button>Add To Cart</button>
-</div>
-
-<div class="card">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfOyGUVskH_XnVP6bPLIbTylLqyCtQXvuaaA&s">
-<h3>Hershey’s Exotic Dark Blue Berry</h3>
-<p>Price: Rs 130/-</p>
-<button>Add To Cart</button>
-</div>
-
-<div class="card">
-<img src="https://www.snrshopping.com/upload/product/Hershey's%20Special%20Dark%20Chocolate%20Syrup%20623g-1044/Hersheys%20Special%20Dark%20Chocolate%20Syrup%20623g-gr91ZrcZik.jpg">
-<h3>Hershey’s Dark Syrup</h3>
-<p>Price: Rs 915/-</p>
-<button>Add To Cart</button>
+<div class="content">
+<iframe name="shopframe"></iframe>
 </div>
 
 </div>
 
 <div class="footer">
-<p>All rights reserved © Shopping Hub</p>
+All rights reserved © Shopping Hub
 </div>
 
 </div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+
+<script>
+    let total = 0;
+    let marks;
+
+    // Input marks for 6 subjects
+    for (let i = 1; i <= 6; i++) {
+        marks = parseFloat(prompt("Enter marks for subject " + i + ":"));
+        total += marks;
+    }
+
+    // Calculate average
+    let avg = total / 6;
+    let grade;
+
+    // Determine grade
+    if (avg < 60) {
+        grade = "F";
+    } else if (avg < 70) {
+        grade = "D";
+    } else if (avg < 80) {
+        grade = "C";
+    } else if (avg < 90) {
+        grade = "B";
+    } else if (avg <= 100) {
+        grade = "A";
+    } else {
+        grade = "Invalid marks";
+    }
+
+    // Display result
+    document.write("Average Marks: " + avg + "<br>");
+    document.write("Grade: " + grade);
+</script>
+
+</body>
+</html>
